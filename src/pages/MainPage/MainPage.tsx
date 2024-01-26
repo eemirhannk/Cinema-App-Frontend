@@ -5,13 +5,21 @@ function MainPage() {
   function changeColor(event) {
     const clickedElement = event.target;
     if (clickedElement.classList.contains("matris-hucre")) {
-      clickedElement.classList.toggle("red");
+      clickedElement.classList.toggle("selected");
+    }
+    if(clickedElement.classList.contains("matris-hucre double")) {
+      clickedElement.classList.toggle("selected");
     }
   }
   return (
     <>
-      <div className="mainContent d-flex flex-column justify-content-center align-items-center w-100">
-        <div className="seatChooseDiv w-100 d-flex justify-content-evenly align-items-center p-5">
+      <div className="mainContent d-flex flex-column justify-content-evenly align-items-center w-100">
+        <div className="screenDiv">
+          PERDE
+        </div>
+        <div className="seatChooseDiv w-100 d-flex justify-content-center align-items-center p-5">
+            <div className="w-100 d-flex justify-content-evenly align-items-center">
+
           <div className="seatGroups">
             <div className="seat-hucre">A</div>
             <div className="seat-hucre">B</div>
@@ -79,14 +87,22 @@ function MainPage() {
             <div className="matris-hucre">54</div>
             <div className="matris-hucre">55</div>
             <div className="matris-hucre">56</div>
-            <div className="matris-hucre">57</div>
-            <div className="matris-hucre">58</div>
-            <div className="matris-hucre">59</div>
-            <div className="matris-hucre">50</div>
-            <div className="matris-hucre">61</div>
-            <div className="matris-hucre">62</div>
-            <div className="matris-hucre">63</div>
-            <div className="matris-hucre">64</div>
+            <div className="matris-hucre double">
+              <p>57</p>
+              <p>58</p>
+            </div>
+            <div className="matris-hucre double">
+              <p>59</p>
+              <p>60</p>
+            </div>
+            <div className="matris-hucre double">
+              <p>61</p>
+              <p>62</p>
+            </div>
+            <div className="matris-hucre double">
+              <p>63</p>
+              <p>64</p>
+            </div>
           </div>
           <div className="seatGroups">
             <div className="seat-hucre">A</div>
@@ -98,8 +114,9 @@ function MainPage() {
             <div className="seat-hucre">G</div>
             <div className="seat-hucre">H</div>
           </div>
+            </div>
         </div>
-        <div className="seatInfoDiv d-flex gap-4">
+        <div className="seatInfoDiv d-flex">
           <div className="infoWrapper">
             <div style={{backgroundColor:"grey"}} className="matris-hucre"></div>
             <p>Dolu Koltuklar</p>
