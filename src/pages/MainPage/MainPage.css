@@ -1,61 +1,83 @@
-.mainContent{
-    min-height: 100vh;
+.mainContent {
+  min-height: 100vh;
 }
-p{
+p {
   margin-bottom: 0;
 }
 
+.screenDiv {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 20px;
+}
+.sendSeatInfoButton {
+  height: 40px;
+  background-color: #ddd;
+  border: 2px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+.sendSeatInfoButton:hover {
+  background-color: #ccc;
+}
 .matris {
-    display: flex;
-    flex-wrap: wrap;
-    width: 336px;
-    grid-template-columns: repeat(8, 1fr); /* 10 sütun */
-    gap: 2px; /* Sütun ve satırlar arasındaki boşluk */
-  }
-
-  .matris-hucre {
-    width: 40px;
-    height: 40px;
-    background-color: #ddd;
-    border: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  .matris-hucre.double{
-    width: 82px;
-    justify-content: space-around;
-  }
-  .seatGroups{
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-.seat-hucre{
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 14px;
-    cursor: context-menu;
+  display: flex;
+  flex-wrap: wrap;
+  width: 336px;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2px;
 }
 
-  .matris-hucre.selected,
-  .matris-hucre.double.selected {
-    background-color: tomato;
-    color: white;
-  }
-  .seatInfoDiv{
-    gap: 15px;
-  }
-  .infoWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-  }
+.matris-hucre {
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  border: 2px solid blue;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+.matris-hucre.double {
+  width: 82px;
+  justify-content: space-around;
+  border: 2px solid blue;
+  border-top: none;
+}
+.seatGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.seat-hucre {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: context-menu;
+}
+
+.matris-hucre.selected,
+.matris-hucre.double.selected {
+  background-color: tomato !important;
+  color: white !important;
+}
+.seatInfoDiv {
+  gap: 15px;
+}
+.infoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
