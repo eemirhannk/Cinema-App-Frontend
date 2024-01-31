@@ -1,9 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Confirmation = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      sa
+      <h1>Confirmation</h1>
+      <button onClick={()=>navigate("/")}>Ana Menüye Dön</button>
+     
     </div>
   )
 }

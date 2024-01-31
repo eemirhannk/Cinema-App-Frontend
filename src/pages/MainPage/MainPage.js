@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./MainPage.css";
-import {Link , BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 const MainPage = () => {
 
   const [selectedSeats, setSelectedSeats] = useState([]);
-
+  const navigate = useNavigate();
   function changeColor(event) {
     const clickedElement = event.target;
     if (clickedElement.classList.contains("matris-hucre")) {
@@ -27,12 +28,16 @@ const MainPage = () => {
     }
   }
   function sendSeatInfo() {
+
+    navigate("/Confirm")
+
+
     console.log(selectedSeats);
 
 
   }
   return (
-    <Router>
+
       <div className="mainContent d-flex flex-column justify-content-evenly align-items-center w-100">
         <div className="row w-100">
           <div className="col-md-2"></div>
@@ -41,9 +46,9 @@ const MainPage = () => {
             <div className="screenDiv">PERDE</div>
           </div>
           <div className="col-md-2 d-flex justify-content-start">
-            <Link className="sendSeatInfoButton" onClick={sendSeatInfo} to={"/confirmation"}>
+            <button className="sendSeatInfoButton" onClick={sendSeatInfo} >
               DEVAM ET
-            </Link>
+            </button>
             {/* <button className="sendSeatInfoButton" onClick={sendSeatInfo}>
               DEVAM ET
             </button> */}
@@ -315,7 +320,7 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-    </Router>
+
   );
 }
 
