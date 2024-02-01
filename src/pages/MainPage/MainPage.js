@@ -29,7 +29,7 @@ const MainPage = () => {
   }
   function sendSeatInfo() {
 
-    navigate("/Confirm")
+    navigate("/confirmation")
 
 
     console.log(selectedSeats);
@@ -49,9 +49,6 @@ const MainPage = () => {
             <button className="sendSeatInfoButton" onClick={sendSeatInfo} >
               DEVAM ET
             </button>
-            {/* <button className="sendSeatInfoButton" onClick={sendSeatInfo}>
-              DEVAM ET
-            </button> */}
           </div>
         </div>
         <div className="seatChooseDiv w-100 d-flex justify-content-center align-items-center p-5">
