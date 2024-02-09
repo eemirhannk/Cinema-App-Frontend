@@ -1,5 +1,5 @@
 import "./App.css";
-import Confirmation from "./pages/Confirmation/Confirmation.js";
+import Payment from "./pages/Payment/Payment.js";
 import MainPage from "./pages/MainPage/MainPage.js";
 import FirstScreen from "./pages/FirstScreen/FirstScreen.js";
 import { Routes, Route } from "react-router-dom";
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<FirstScreen />} />
         <Route path="/mainpage" element={<MainPage />} />
-        <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </>
   );

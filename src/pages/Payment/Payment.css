@@ -1,0 +1,23 @@
+#divPayment {
+    min-height: calc(100vh - 150px);
+  }
+
+input{
+    background-color: #3d4245;
+    width: 95%;
+    border: none;
+    border-radius: 6.4px !important;
+    padding: 1rem;
+    color: #fff;
+}
+.paymentForm,
+.confirmationForm{
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+.confirmationForm{
+    height: 500px;
+}
