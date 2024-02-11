@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Payment.css";
 import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
+
+  // useEffect(() => {
+  //   fetch("https://localhost:7135/WeatherForecast", {
+  //     method: "GET",
+  //     headers: {},
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //     });
+
+  // }, []);
   const navigate = useNavigate();
   return (
     <div id="divPayment" className="d-flex">
@@ -20,7 +32,7 @@ const Payment = () => {
                   inputMode="numeric"
                   name="cardNumber"
                   pattern="[0-9\s]{13,19}"
-                  maxlength="4"
+                  maxLength="4"
                   required
                 />
                 <input
@@ -30,7 +42,7 @@ const Payment = () => {
                   inputMode="numeric"
                   name="cardNumber"
                   pattern="[0-9\s]{13,19}"
-                  maxlength="4"
+                  maxLength="4"
                   required
                 />
                 <input
@@ -40,7 +52,7 @@ const Payment = () => {
                   inputMode="numeric"
                   name="cardNumber"
                   pattern="[0-9\s]{13,19}"
-                  maxlength="4"
+                  maxLength="4"
                   required
                 />
                 <input
@@ -50,7 +62,7 @@ const Payment = () => {
                   inputMode="numeric"
                   name="cardNumber"
                   pattern="[0-9\s]{13,19}"
-                  maxlength="4"
+                  maxLength="4"
                   required
                 />
               </div>
@@ -61,7 +73,7 @@ const Payment = () => {
                 inputMode="numeric"
                 name="cardNumber"
                 pattern="[0-9\s]{13,19}"
-                maxlength="16"
+                maxLength="16"
                 required
               /> */}
               <input
@@ -83,7 +95,7 @@ const Payment = () => {
                 type="tel"
                 id="cardCvc"
                 name="cardCvc"
-                maxlength="3"
+                maxLength="3"
                 required
               />
             </form>
@@ -102,7 +114,7 @@ const Payment = () => {
             </label>
             <label className="d-flex align-items-center justify-content-center gap-3">
               <input type="checkbox" name="onay2" required />
-              Self Group E-Posta ve SMS gönderimleri aracılığıyla ön gösterimler, güncel etkinlikler ve kampanyalardan haberdar olmak istiyorum.
+              Self Group mail ve SMS gönderimleri aracılığıyla ön gösterimler, güncel etkinlikler ve kampanyalardan haberdar olmak istiyorum.
             </label>
             </div>
             <button className="confirmButton" type="submit">Onayla</button>

@@ -8,6 +8,7 @@ function App() {
   return (
     <>
     <Navbar/>
+    <h1 className="selfCinema">SELF CINEMA</h1>
       <Routes>
         <Route path="/" element={<FirstScreen />} />
         <Route path="/mainpage" element={<MainPage />} />

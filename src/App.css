@@ -2,3 +2,13 @@ body{
   background-image: url(./assets/images/main_background.jpg);
   background-size: cover;
 }
+.selfCinema{
+  z-index: -1;
+  cursor: none;
+  opacity: .7;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+}
