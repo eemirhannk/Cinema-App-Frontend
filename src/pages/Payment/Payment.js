@@ -91,7 +91,21 @@ const Payment = () => {
         </div>
         <div className="col-md-3">
           <div className="confirmationForm p-4">
-            <h2 className="movieSelectionTitle text-nowrap w-100">Toplam: 100,00 TL</h2>
+            <h2 className="movieSelectionTitle text-nowrap w-100">
+              Toplam: 130,00 TL
+            </h2>
+            <div className="checkboxWrapper d-flex flex-column gap-4">
+
+            <label className="d-flex align-items-center justify-content-center gap-3">
+              <input type="checkbox" name="onay1" required />
+              Ön Bilgilendirme Koşulları’nı ve Mesafeli Satış Sözleşmesi’ni okudum, onaylıyorum.
+            </label>
+            <label className="d-flex align-items-center justify-content-center gap-3">
+              <input type="checkbox" name="onay2" required />
+              Self Group E-Posta ve SMS gönderimleri aracılığıyla ön gösterimler, güncel etkinlikler ve kampanyalardan haberdar olmak istiyorum.
+            </label>
+            </div>
+            <button className="confirmButton" type="submit">Onayla</button>
           </div>
         </div>
         <div className="col-md-2"></div>

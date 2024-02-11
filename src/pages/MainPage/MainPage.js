@@ -5,6 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 const MainPage = () => {
   const [selectedSeats, setSelectedSeats] = useState([]);
+  const [selectedSeatsLength, setSelectedSeatsLength] = useState(0);
 
   const navigate = useNavigate();
   function changeColor(event) {
@@ -19,16 +20,20 @@ const MainPage = () => {
           rowIndex === clickedRowIndex && seatId === clickedElementId
       );
       if (indexToRemove !== -1) {
+        console.log(selectedSeats.splice(indexToRemove, 1));
         selectedSeats.splice(indexToRemove, 1);
+        setSelectedSeatsLength(selectedSeats.length);
       } else {
         setSelectedSeats([...selectedSeats, [clickedRowIndex, clickedElementId]]);
         selectedSeats.push([clickedRowIndex, clickedElementId]);
+        setSelectedSeatsLength(selectedSeats.length);
       }
     }
     if (clickedElement.classList.contains("matris-hucre double")) {
       clickedElement.classList.toggle("selected");
     }
   }
+  console.log(selectedSeats)
   function sendSeatInfo() {
 
     console.log(selectedSeats);
@@ -44,7 +49,7 @@ const MainPage = () => {
         <div className="col-md-2 d-flex justify-content-start">
           <Link
             to={"/payment"}
-            className={`btn continueButton ${selectedSeats ? "visible" : ""}`}
+            className={`btn continueButton ${selectedSeatsLength > 0 ? "visible" : ""}`}
             onClick={sendSeatInfo}
           >
             Devam Et
@@ -319,7 +324,6 @@ const MainPage = () => {
           <p>Seçiminiz</p>
         </div>
       </div>
-      <Navbar selectedSeats={selectedSeats} />
     </div>
   );
 };

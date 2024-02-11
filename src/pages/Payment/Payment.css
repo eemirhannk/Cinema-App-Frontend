@@ -2,7 +2,7 @@
     min-height: calc(100vh - 150px);
   }
 
-input{
+.paymentForm input{
     background-color: #3d4245;
     width: 95%;
     border: none;
@@ -19,5 +19,24 @@ input{
     gap: 20px;
 }
 .confirmationForm{
-    height: 500px;
+    height: 450px;
+    gap: 0px;
+    align-items: center;
+    justify-content: space-between;
 }
+label{
+    color: #fff;
+    font-size: 1rem;
+}
+.confirmButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #96a825;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 24px;
+    width: 142px;
+    height: 48px;
+}   

@@ -118,3 +118,6 @@
   top: 20%;
   right: 60px;
 }
+.continueButton:hover{
+  background: #96a825;
+}
