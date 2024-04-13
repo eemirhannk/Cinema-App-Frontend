@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./FirstScreen.css";
 import { Link } from "react-router-dom";
 import MainPage from "../MainPage/MainPage";
 const FirstScreen = () => {
+
+  const [movies, setMovies] = useState([]);
   // Örnek film verileri
+
+  useEffect(() => {
+    fetch("https://localhost:44361/api/Movies/GetAllMovies")
+      .then((response) => response.json())
+      .then((data) => setMovies(data.data));
+      console.log(movies)
+
+  }, []);
   const films = [
     {
       id: 1,

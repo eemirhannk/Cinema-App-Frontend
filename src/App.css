@@ -5,6 +5,7 @@ body{
 .selfCinema{
   z-index: -1;
   cursor: none;
+  font-family: cursive;
   opacity: .7;
   position: absolute;
   top: 20%;

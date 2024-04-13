@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import "./MainPage.css";
-import Navbar from "../../components/Navbar/Navbar";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const MainPage = () => {
+const MainPage = ({ sendDataToParent }) => {
+
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [selectedSeatsLength, setSelectedSeatsLength] = useState(0);
-
-  const navigate = useNavigate();
   function changeColor(event) {
     const clickedElement = event.target;
     if (clickedElement.classList.contains("matris-hucre")) {
@@ -35,8 +33,7 @@ const MainPage = () => {
   }
   console.log(selectedSeats)
   function sendSeatInfo() {
-
-    console.log(selectedSeats);
+    sendDataToParent(selectedSeats);
   }
   return (
     <div id="divMainPage" className="mainContent d-flex flex-column justify-content-evenly align-items-center w-100">
@@ -69,7 +66,6 @@ const MainPage = () => {
             <div className="seat-hucre">E</div>
             <div className="seat-hucre">F</div>
             <div className="seat-hucre">G</div>
-            <div className="seat-hucre">H</div>
           </div>
           <div className="matris" onClick={changeColor}>
             <div aria-rowindex={"A"} id="1" className="matris-hucre">
@@ -245,38 +241,6 @@ const MainPage = () => {
             <div aria-rowindex={"G"} id="56" className="matris-hucre">
               56
             </div>
-            <div className="matris-hucre double">
-              <div aria-rowindex={"H"} id="57">
-                57
-              </div>
-              <div aria-rowindex={"H"} id="58">
-                58
-              </div>
-            </div>
-            <div className="matris-hucre double">
-              <div aria-rowindex={"H"} id="59">
-                59
-              </div>
-              <div aria-rowindex={"H"} id="60">
-                60
-              </div>
-            </div>
-            <div className="matris-hucre double">
-              <div aria-rowindex={"H"} id="61">
-                61
-              </div>
-              <div aria-rowindex={"H"} id="62">
-                62
-              </div>
-            </div>
-            <div className="matris-hucre double">
-              <div aria-rowindex={"H"} id="63">
-                63
-              </div>
-              <div aria-rowindex={"H"} id="64">
-                64
-              </div>
-            </div>
           </div>
           <div className="seatGroups">
             <div className="seat-hucre">A</div>
@@ -286,7 +250,6 @@ const MainPage = () => {
             <div className="seat-hucre">E</div>
             <div className="seat-hucre">F</div>
             <div className="seat-hucre">G</div>
-            <div className="seat-hucre">H</div>
           </div>
         </div>
       </div>
@@ -301,13 +264,6 @@ const MainPage = () => {
         <div className="infoWrapper">
           <div className="matris-hucre"></div>
           <p>Boş Koltuklar</p>
-        </div>
-        <div className="infoWrapper">
-          <div className="matris-hucre double">
-            <p></p>
-            <p></p>
-          </div>
-          <p>İkili Koltuklar</p>
         </div>
         <div className="infoWrapper">
           <div

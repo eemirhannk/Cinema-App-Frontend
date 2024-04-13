@@ -2,7 +2,10 @@ import React, { useEffect } from "react";
 import "./Payment.css";
 import { useNavigate } from "react-router-dom";
 
-const Payment = () => {
+const Payment = ({dataFromChild}) => {
+
+  const totalPrice = (dataFromChild.length * 130).toFixed(2);
+
 
   // useEffect(() => {
   //   fetch("https://localhost:7135/WeatherForecast", {
@@ -104,7 +107,7 @@ const Payment = () => {
         <div className="col-md-3">
           <div className="confirmationForm p-4">
             <h2 className="movieSelectionTitle text-nowrap w-100">
-              Toplam: 130,00 TL
+              Toplam: {totalPrice} TL
             </h2>
             <div className="checkboxWrapper d-flex flex-column gap-4">
 

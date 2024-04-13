@@ -1,0 +1,87 @@
+#divLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+#divLogin .book{
+    width: 1000px;
+    height: 500px;
+    border-radius: 10px;
+}
+#divLogin .leftSide{
+    height: 100%;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    gap: 35px;
+    align-items: center;
+    background-color: silver;
+}
+#divLogin .rightSide{
+    height: 100%;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    gap: 35px;
+    align-items: center;
+    background-color: black;
+}
+#divLogin .loginHeader{
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+}
+#divLogin .loginInput{
+    height: 50px;
+    border: none;
+    background-color: gainsboro;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 200;
+}
+#divLogin .loginInput:focus{
+    outline: none;
+}
+#divLogin .loginSubHeader{
+    font-size: 17px;
+    text-align: center;
+    font-weight: 200;
+}
+#divLogin .leftSideButton{
+    width: 180px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+#divLogin .leftSideButton:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+#divLogin .rightSideButton{
+    width: 180px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#divLogin .rightSideButton:hover{
+    background-color: white;
+    color: black;
+}
